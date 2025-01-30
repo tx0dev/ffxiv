@@ -1,0 +1,14 @@
+baseURL = 'https://soktai.prose.sh/'
+languageCode = 'en-ca'
+title = "Soktai's FFXIV"
+enableGitInfo = true
+
+# Theme is intended for documentation use
+disableKinds = ['taxonomy']
+
+[module]
+[[module.imports]]
+path = 'github.com/alex-shpak/hugo-book'
+
+[params]
+bookSection = "*"
