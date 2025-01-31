@@ -1,0 +1,130 @@
+{{- /* Get parameters with defaults */ -}}
+{{- $pattern := .Get "pattern" | default "*" -}}
+{{- $type := .Get "type" | default "all" -}}
+{{- $prefix := .Get "prefix" | default "" -}}
+{{- $suffix := .Get "suffix" | default "" -}}
+
+{{- $images := .Page.Resources.Match (printf "%s.{jpg,jpeg,png,gif}" $pattern) -}}
+
+{{- $filteredImages := partial "filter-images.html" (dict "images" $images "type" $type "prefix" $prefix "suffix" $suffix) -}}
+
+<div class="image-sequence">
+    {{- range $index, $imageInfo := split $filteredImages ";;" -}}
+        {{- $imageData := split $imageInfo "||" -}}
+        {{- if ge (len $imageData) 2 -}}
+        <figure>
+            <img src="{{ index $imageData 0 }}" 
+                 alt="{{ index $imageData 1 }}" 
+                 onclick="this.nextElementSibling.showModal()" />
+            <dialog class="lightbox">
+                <div class="lightbox-container">
+                    <div class="lightbox-content">
+                        <img src="{{ index $imageData 0 }}" 
+                             alt="{{ index $imageData 1 }}"
+                             class="zoomable" />
+                    </div>
+                    <button class="close-button" onclick="this.closest('dialog').close()">×</button>
+                </div>
+            </dialog>
+        </figure>
+        {{- end -}}
+    {{- end -}}
+</div>
+
+<script>
+document.querySelectorAll('.zoomable').forEach(img => {
+    let zoom = 1;
+    let currentX = 0;
+    let currentY = 0;
+    let lastTouchDistance = 0;
+    let isDragging = false;
+    let startX = 0;
+    let startY = 0;
+
+    function updateTransform() {
+        img.style.transform = `translate(${currentX}px, ${currentY}px) scale(${zoom})`;
+    }
+
+    img.addEventListener('mousedown', e => {
+        if (zoom > 1) {
+            isDragging = true;
+            startX = e.clientX - currentX;
+            startY = e.clientY - currentY;
+            e.preventDefault();
+        }
+    });
+
+    img.addEventListener('mousemove', e => {
+        if (isDragging) {
+            currentX = e.clientX - startX;
+            currentY = e.clientY - startY;
+            updateTransform();
+            e.preventDefault();
+        }
+    });
+
+    img.addEventListener('mouseup', () => {
+        isDragging = false;
+    });
+    img.addEventListener('mouseleave', () => {
+        isDragging = false;
+    });
+
+    img.addEventListener('touchstart', e => {
+        if (e.touches.length === 2) {
+            e.preventDefault();
+            lastTouchDistance = Math.hypot(
+                e.touches[0].pageX - e.touches[1].pageX,
+                e.touches[0].pageY - e.touches[1].pageY
+            );
+        } else if (e.touches.length === 1 && zoom > 1) {
+            isDragging = true;
+            startX = e.touches[0].clientX - currentX;
+            startY = e.touches[0].clientY - currentY;
+        }
+    });
+
+    img.addEventListener('touchmove', e => {
+        e.preventDefault();
+        if (e.touches.length === 2) {
+            const distance = Math.hypot(
+                e.touches[0].pageX - e.touches[1].pageX,
+                e.touches[0].pageY - e.touches[1].pageY
+            );
+            const delta = distance - lastTouchDistance;
+            lastTouchDistance = distance;
+            
+            const oldZoom = zoom;
+            zoom = Math.min(Math.max(zoom + delta * 0.01, 1), 4);
+            
+            // Adjust position to zoom around center
+            if (zoom !== oldZoom) {
+                const rect = img.getBoundingClientRect();
+                const centerX = rect.left + rect.width / 2;
+                const centerY = rect.top + rect.height / 2;
+                currentX = centerX - (centerX - currentX) * (zoom / oldZoom);
+                currentY = centerY - (centerY - currentY) * (zoom / oldZoom);
+            }
+            
+            updateTransform();
+        } else if (e.touches.length === 1 && isDragging) {
+            currentX = e.touches[0].clientX - startX;
+            currentY = e.touches[0].clientY - startY;
+            updateTransform();
+        }
+    });
+
+    img.addEventListener('touchend', () => {
+        isDragging = false;
+        lastTouchDistance = 0;
+    });
+
+    // Double click/tap to reset
+    img.addEventListener('dblclick', () => {
+        zoom = 1;
+        currentX = 0;
+        currentY = 0;
+        updateTransform();
+    });
+});
+</script>

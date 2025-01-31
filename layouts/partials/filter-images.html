@@ -1,0 +1,24 @@
+{{- $images := .images -}}
+{{- $type := .type -}}
+{{- $prefix := .prefix -}}
+{{- $suffix := .suffix -}}
+
+{{- range $images -}}
+    {{- $include := true -}}
+    {{- /* Apply type filter */ -}}
+    {{- if and (ne $type "all") (not (strings.HasSuffix (lower .Name) (lower $type))) -}}
+        {{- $include = false -}}
+    {{- end -}}
+    {{- /* Apply prefix filter */ -}}
+    {{- if and (ne $prefix "") (not (strings.HasPrefix .Name $prefix)) -}}
+        {{- $include = false -}}
+    {{- end -}}
+    {{- /* Apply suffix filter */ -}}
+    {{- if and (ne $suffix "") (not (strings.HasSuffix .Name $suffix)) -}}
+        {{- $include = false -}}
+    {{- end -}}
+
+    {{- if $include -}}
+        {{- .RelPermalink -}}||{{- .Name -}};;
+    {{- end -}}
+{{- end -}}

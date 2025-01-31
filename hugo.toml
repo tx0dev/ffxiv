@@ -6,9 +6,22 @@ enableGitInfo = true
 # Theme is intended for documentation use
 disableKinds = ['taxonomy']
 
+[markup.goldmark.renderer]
+unsafe = true
+
 [module]
 [[module.imports]]
 path = 'github.com/alex-shpak/hugo-book'
 
+[menu]
+[[menu.after]]
+name = 'Lodestone'
+url = 'https://na.finalfantasyxiv.com/lodestone/'
+weight = 20
+
+
 [params]
-bookSection = "*"
+BookTheme = "auto"
+BookSection = "*"
+BookDateFormat = '2006-01-02'
+BookComments = false
