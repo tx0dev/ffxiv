@@ -1,12 +1,13 @@
 # FFXIV Reference site
 
-A simple site available at https://ffxiv.tx0.dev. Hosted [pico.sh](https://pico.sh/) platform.
-
 The entire reason this exist is because I want to have access to some quick reference material on my tablet and not alt-tab out of the game.
+
+It's available at https://ffxiv.tx0.dev, hosted on [pico.sh](https://pico.sh/).
 
 ## Development
 
 Install [Hugo](https://gohugo.io/).
+We're using the very simple [Hugo-Book](https://github.com/alex-shpak/hugo-book) theme.
 
 ```sh
 hugo serve --disableFastRender
@@ -40,6 +41,14 @@ Same as the currency shortcode, but for quest icons.
 
 ```markdown
 {{< quest "Ifrit Bleeds, We Can Kill It" "msq" >}}
+```
+
+#### Bundle Gallery
+
+A gallery [shortcode](layouts/shortcodes/bundle-gallery.html) that look for page bundle file and render them.
+
+```markdown
+{{< bundle-gallery >}}
 ```
 
 ## Roadmap
