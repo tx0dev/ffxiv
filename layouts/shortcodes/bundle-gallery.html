@@ -5,7 +5,7 @@
 {{- $suffix := .Get "suffix" | default "" -}}
 {{- $imgExt := cond (eq hugo.Environment "pico") "/ext:webp" "" -}}
 
-{{- $images := .Page.Resources.Match (printf "%s.{jpg,jpeg,png,gif}" $pattern) -}}
+{{- $images := .Page.Resources.Match (printf "%s.{jpg,jpeg,png,gif,webp}" $pattern) -}}
 {{- $filteredImages := partial "filter-images.html" (dict "images" $images "type" $type "prefix" $prefix "suffix" $suffix) -}}
 
 <div class="gallery">
