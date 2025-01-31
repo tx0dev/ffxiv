@@ -25,3 +25,7 @@ BookTheme = "auto"
 BookSection = "*"
 BookDateFormat = '2006-01-02'
 BookComments = false
+BookRepo = 'https://github.com/tx0dev/ffxiv'
+BookCommitPath = 'commit'
+BookEditPath = 'edit/main'
+BookSearch = true

@@ -22,11 +22,31 @@ To take advantage of the pico.sh [image optimization](https://pico.sh/images#ima
 hugo --environment pico
 rsync -rv public/ pgs.sh:/ffxiv
 ```
+## Features
+
+### Shortcodes
+
+#### Currency
+
+draw a simple box with the current icon. Take 2 arguments, the amount and the currency name. current default to `gil` if not provided. check the [shortcodes file](layouts/shortcodes/currency.html) for the full list of currency.
+
+```markdown
+{{< currency 000 "poetics" >}}
+```
+
+#### Quests
+
+Same as the currency shortcode, but for quest icons.
+
+```markdown
+{{< quest "Ifrit Bleeds, We Can Kill It" "msq" >}}
+```
 
 ## Roadmap
 
 - [ ] Add current extreme and savage guide
 - [ ] SBOM for SQEX assets
+- [ ] Maybe "standardize" link references
 - [ ] Get the [FFXIV Tooltip](https://eu.finalfantasyxiv.com/lodestone/special/fankit/tooltip/) working
 
 ## Copyright
