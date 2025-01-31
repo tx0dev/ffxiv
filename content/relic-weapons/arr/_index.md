@@ -1,6 +1,7 @@
 ---
 title: A Realm Reborn
 type: docs
+bookCollapseSection: true
 ---
 
 # A Realm Reborn Relic

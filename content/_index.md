@@ -5,4 +5,4 @@ title: Soktai's FFXIV Reference
 
 # Soktai FFXIV Reference
 
-Howdy!
+Current FFXIV path: 7.16-hotfix
