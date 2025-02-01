@@ -13,19 +13,23 @@
         {{- $imageData := split $imageInfo "||" -}}
         {{- if ge (len $imageData) 2 -}}
         <figure class="gallery__item">
-            <img src="{{ index $imageData 0 }}{{ $imgExt }}" 
-                 alt="{{ index $imageData 1 }}" 
+            <img src="{{ index $imageData 0 }}{{ $imgExt }}"
+                 alt="{{ index $imageData 1 }}"
                  loading="lazy"
                  class="gallery__image"
                  onclick="this.nextElementSibling.showModal()" />
             <dialog class="lightbox">
                 <div class="lightbox__container">
                     <div class="lightbox__content">
-                        <img src="{{ index $imageData 0 }}{{ $imgExt }}" 
+                        <img src="{{ index $imageData 0 }}{{ $imgExt }}"
                              alt="{{ index $imageData 1 }}"
-                             class="lightbox__image js-zoomable" />
+                             class="lightbox__image js-zoomable"
+                             data-gallery-index="{{ $index }}"
+                             data-gallery-total="{{ len (split $filteredImages ";;") }}" />
                     </div>
-                    <button class="lightbox__close" 
+                    <button class="lightbox__nav lightbox__nav--prev" aria-label="Previous image">‹</button>
+                    <button class="lightbox__nav lightbox__nav--next" aria-label="Next image">›</button>
+                    <button class="lightbox__close"
                             onclick="this.closest('dialog').close()"
                             aria-label="Close lightbox">×</button>
                 </div>
@@ -34,6 +38,7 @@
         {{- end -}}
     {{- end -}}
 </div>
+
 
 {{- /* Only include script if it hasn't been included before */ -}}
 {{ if not (.Page.Scratch.Get "lightboxLoaded") }}

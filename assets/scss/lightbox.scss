@@ -1,7 +1,7 @@
 .lightbox {
     padding: 0;
     border: none;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(0, 0, 0, 0.85); // Made slightly transparent
     width: 100vw;
     height: 100vh;
     max-width: 100vw;
@@ -9,7 +9,7 @@
     margin: 0;
 
     &::backdrop {
-        background: black;
+        background: rgba(0, 0, 0, 0.5); // Made backdrop more transparent
     }
 
     &__container {
@@ -28,7 +28,7 @@
     }
 
     &__image {
-        max-width: 95vw; // Default for mobile
+        max-width: 95vw;
         max-height: 95vh;
         width: auto;
         height: auto;
@@ -36,10 +36,11 @@
         touch-action: none;
         transform-origin: center;
         will-change: transform;
+        transition: transform 0.05s ease-out;
         cursor: grab;
 
         @media (min-width: 1200px) {
-            max-width: 1140px; // 1200px - 60px for padding
+            max-width: 1140px;
         }
 
         &:active {
@@ -47,22 +48,76 @@
         }
     }
 
+    // Updated close button styles
     &__close {
         position: absolute;
         top: 20px;
         right: 20px;
-        background: none;
-        border: none;
+        background: rgba(0, 0, 0, 0.5);
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
         color: white;
         font-size: 40px;
         cursor: pointer;
-        padding: 10px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
         z-index: 1000;
-        opacity: 0.7;
-        transition: opacity 0.2s;
+        opacity: 0.9;
+        transition: all 0.2s ease;
 
         &:hover {
             opacity: 1;
+            background: rgba(0, 0, 0, 0.8);
+            border-color: white;
+            transform: scale(1.1);
+        }
+    }
+
+    // Updated navigation buttons styles
+    &__nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        color: white;
+        font-size: 50px;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        opacity: 0.9;
+        transition: all 0.2s ease;
+        z-index: 1000;
+
+        &:hover {
+            opacity: 1;
+            background: rgba(0, 0, 0, 0.8);
+            border-color: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        &--prev {
+            left: 20px;
+            padding-right: 3px; // Optical adjustment for arrow
+        }
+
+        &--next {
+            right: 20px;
+            padding-left: 3px; // Optical adjustment for arrow
+        }
+
+        @media (max-width: 768px) {
+            font-size: 40px;
+            width: 50px;
+            height: 50px;
         }
     }
 }

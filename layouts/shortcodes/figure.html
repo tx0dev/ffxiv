@@ -1,0 +1,60 @@
+{{/* Get all the regular figure parameters */}}
+{{ $src := .Get "src" }}
+{{ $link := .Get "link" }}
+{{ $target := .Get "target" | default "_blank" }}
+{{ $rel := .Get "rel" }}
+{{ $alt := .Get "alt" }}
+{{ $title := .Get "title" }}
+{{ $caption := .Get "caption" }}
+{{ $class := .Get "class" }}
+{{ $height := .Get "height" }}
+{{ $width := .Get "width" }}
+{{ $imgExt := cond (eq hugo.Environment "pico") "/ext:webp" "" }}
+
+<figure{{ with $class }} class="{{ . }}"{{ end }}>
+    {{/* If a link is specified, use that instead of lightbox */}}
+    {{ if $link }}
+        <a href="{{ $link }}"{{ with $target }} target="{{ . }}"{{ end }}{{ with $rel }} rel="{{ . }}"{{ end }}>
+            <img src="{{ $src }}{{ $imgExt }}"
+                {{ with $alt }} alt="{{ . }}"{{ end }}
+                {{ with $width }} width="{{ . }}"{{ end }}
+                {{ with $height }} height="{{ . }}"{{ end }}
+                loading="lazy">
+        </a>
+    {{/* Otherwise, implement lightbox */}}
+    {{ else }}
+        <img src="{{ $src }}{{ $imgExt }}"
+            {{ with $alt }} alt="{{ . }}"{{ end }}
+            {{ with $width }} width="{{ . }}"{{ end }}
+            {{ with $height }} height="{{ . }}"{{ end }}
+            loading="lazy"
+            onclick="this.nextElementSibling.showModal()"
+            style="cursor: pointer;">
+        <dialog class="lightbox">
+            <div class="lightbox__container">
+                <div class="lightbox__content">
+                    <img src="{{ $src }}{{ $imgExt }}"
+                         {{ with $alt }} alt="{{ . }}"{{ end }}
+                         class="lightbox__image js-zoomable" />
+                </div>
+                <button class="lightbox__close"
+                        onclick="this.closest('dialog').close()"
+                        aria-label="Close lightbox">×</button>
+            </div>
+        </dialog>
+    {{ end }}
+    {{/* Caption handling */}}
+    {{ if or $caption $title }}
+        <figcaption>
+            {{ with $title }}<h4>{{ . }}</h4>{{ end }}
+            {{ with $caption }}{{ . | markdownify }}{{ end }}
+        </figcaption>
+    {{ end }}
+</figure>
+
+{{/* Only include script if it hasn't been included before */}}
+{{ if not (.Page.Scratch.Get "lightboxLoaded") }}
+    {{ $js := resources.Get "js/lightbox.js" | minify | fingerprint }}
+    <script src="{{ $js.RelPermalink }}" defer></script>
+    {{ .Page.Scratch.Set "lightboxLoaded" true }}
+{{ end }}
