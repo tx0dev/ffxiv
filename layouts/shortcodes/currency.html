@@ -13,7 +13,6 @@
 {{- $title := index $titles $type -}}
 
 <span
-    class="token-icon"
-    style="background-image: url('/icon/currency-{{ $type }}.png');"
+    class="token-ref token-ref--{{ $type }}"
     title="{{ $title }}"
 >{{ $value }}<span class="sr-only"> {{ $title }}</span></span>

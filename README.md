@@ -55,8 +55,8 @@ A gallery [shortcode](layouts/shortcodes/bundle-gallery.html) that look for page
 
 - [ ] Add current extreme and savage guide
 - [ ] SBOM for SQEX assets
-- [ ] Maybe "standardize" link references
-- [ ] Get the [FFXIV Tooltip](https://eu.finalfantasyxiv.com/lodestone/special/fankit/tooltip/) working
+- [x] Maybe "standardize" link references
+- [x] Get the [FFXIV Tooltip](https://eu.finalfantasyxiv.com/lodestone/special/fankit/tooltip/) working
 
 ## Copyright
 
