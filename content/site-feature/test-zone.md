@@ -16,6 +16,8 @@ Should not have two icons.
 | Duty | {{< ref duty=dungeon db="duty=259c37be2ea" >}}Ihuykatumu{{< /ref >}} |
 | Item | {{< ref text="Dreadwyrm Blade" db="item=b2cab67854f" />}} |
 | Nothing | {{< ref >}}Dawntrail{{< /ref >}} |
+| currency | {{< currency 1000 poetics >}} |
+
 ## Sprite
 
 ![Eorzea Sprite](/icon/eorzea-sprite.png)

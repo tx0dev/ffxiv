@@ -1,4 +1,4 @@
-{{- $value := .Get 0 -}}
+{{- $text := .Get 0 -}}
 {{- $type := .Get 1 | default "gil" -}}
 {{- $titles := dict
     "gil" "Gil"
@@ -15,4 +15,5 @@
 <span
     class="token-ref token-ref--{{ $type }}"
     title="{{ $title }}"
->{{ $value }}<span class="sr-only"> {{ $title }}</span></span>
+>{{ $text | safeHTML }}<span class="sr-only"> {{ $title }}</span></span>
+{{- /* end */ -}}
