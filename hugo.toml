@@ -19,6 +19,22 @@ name = 'Lodestone'
 url = 'https://na.finalfantasyxiv.com/lodestone/'
 weight = 20
 
+[[menu.after]]
+name = "FFXIV Console Game Wiki"
+url = "https://ffxiv.consolegameswiki.com/wiki/FF14_Wiki"
+weight = 30
+
+[[menu.after]]
+name = "Teamcraft"
+url = "https://ffxivteamcraft.com/"
+weight = 40
+
+[[menu.after]]
+name = "Garland Tools"
+url = "https://www.garlandtools.org/db/"
+weight = 50
+
+[[menu.after]]
 
 [params]
 BookTheme = "auto"
