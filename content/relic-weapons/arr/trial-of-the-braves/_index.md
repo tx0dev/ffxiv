@@ -8,11 +8,10 @@ type: docs
 
 This requires completing 9 books.
 
-Accept the {{< db quest=ae51238f704 >}}Trial of the Braves{{< /db >}} quest from {{< db npc=cd1713e6dc7 >}}Jalzahn{{< /db >}} in North Shroud.
+Accept the {{< ref db="quest=ae51238f704" quest=feature >}}Trial of the Braves{{< /ref >}} quest from {{< ref db="npc=cd1713e6dc7" >}}Jalzahn{{< /ref >}} in North Shroud.
 
-Accept the {{< quest "Trial of the Braves" normal >}} quest from {{< db npc=cd1713e6dc7 >}}Jalzahn{{< /db >}} in North Shroud.
 
-{{< db npc=740bd200eb8 >}}G'jusana{{< /db >}} in Mor Dhona will sell you each books for {{<currency 100 "poetics" >}}.
+{{< ref db="npc=740bd200eb8" >}}G'jusana{{< /ref >}} in Mor Dhona will sell you each books for {{<currency 100 "poetics" >}}.
 
 ## Books of Fire
 Raise Mind
