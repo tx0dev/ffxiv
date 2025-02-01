@@ -1,19 +1,50 @@
+// Individual icons for non-sprite images
+$categories-icons: (
+    "duty": (
+        "variant",
+        "deep",
+        "field",
+    ),
+    "quest": (
+        "levequest",
+        "other",
+    ),
+    "fate": (
+        "boss",
+        "chase",
+        "collect",
+        "defend",
+        "escort",
+        "fate",
+        "slay",
+    ),
+    "npc": (
+        "mob",
+        "levemete",
+    ),
+);
+
+// For the Currency/Token shortcode
+$currencies: (
+    "poetics",
+    "gil",
+    "aesthetics",
+    "heliometry",
+    "nuts",
+    "centurio",
+    "allied",
+    "bicolor"
+);
+
+// Mapping eorzea-sprite.png file
 // Sprite dimensions
 $sprite-width: 2120px;
 $sprite-height: 64px;
 $icon-size: 1.3em;
 $scale-ratio: $sprite-height / $icon-size;
 
-// Individual icons for non-sprite images
-$category-icons: (
-    "duty": (
-        "variant",
-        "deep",
-        "field",
-    ),
-);
 // Organized sprite positions map
-$sprite-categories: (
+$sprite-icons: (
     "duty": (
         "dungeon": 180px,
         "guildhest": 244px,
@@ -31,19 +62,11 @@ $sprite-categories: (
         "msq": 1738px,
         "seasonal": 1802px,
     ),
+    "fate": (),
+    "npc": (),
 );
 
-$currencies: (
-    "poetics",
-    "gil",
-    "aesthetics",
-    "heliometry",
-    "nuts",
-    "centurio",
-    "allied",
-    "bicolor"
-);
-/* Icon shortcodes */
+/* Baseline "pill" for ref and currency */
 .ref {
     background-repeat: no-repeat;
     background-size: 1.3em 1.3em;
@@ -76,8 +99,8 @@ $currencies: (
     }
 }
 
-// Generate classes for each category
-@each $category, $sprites in $sprite-categories {
+// Generate classes for individual icons
+@each $category, $icons in $categories-icons {
     .#{$category}-ref {
         @extend .ref;
         padding: 0px 4px 0px ($icon-size + 0.3em);
@@ -90,30 +113,30 @@ $currencies: (
             transform: translateY(-50%);
             width: $icon-size;
             height: $icon-size;
-            background-image: url("/icon/eorzea-sprite.png");
-            background-size: ($sprite-width / $sprite-height) *
-                $icon-size
-                $icon-size;
             background-repeat: no-repeat;
         }
 
-        // Generate type classes for each category
-        @each $type, $position in $sprites {
-            &--#{$type}::before {
-                background-position: ($position / $scale-ratio) * -1 0;
-            }
-        }
-    }
-}
-
-// Generate classes for individual icons
-@each $category, $icons in $category-icons {
-    .#{$category}-ref {
-        // Generate type classes for each category
         @each $icon in $icons {
             &--#{$icon}::before {
                 background-image: url("/icon/#{$category}-#{$icon}.png");
                 background-size: $icon-size $icon-size;
+            }
+        }
+    }
+}
+// Generate classes for each category
+.sprite-baseline {
+    background-image: url("/icon/eorzea-sprite.png");
+    background-size: ($sprite-width / $sprite-height) * $icon-size $icon-size;
+}
+
+@each $category, $sprites in $sprite-icons {
+    // Generate type classes for each category
+    .#{$category}-ref {
+        @each $type, $position in $sprites {
+            &--#{$type}::before {
+                @extend .sprite-baseline;
+                background-position: ($position / $scale-ratio) * -1 0;
             }
         }
     }
@@ -143,7 +166,7 @@ $currencies: (
 }
 
 // Additional style for DB icon when needed
-.db-ref {
+.db-icon {
     @extend .ref;
     background-image: url("icon/eorzea.png");
     background-position: left 2px center;
