@@ -1,5 +1,9 @@
 ---
 title: Relic Weapons
+bookFlatSection: true
+bookCollapseSection: true
+type: docs
+weight: 20
 ---
 # Relic Weapons information
 

@@ -3,6 +3,7 @@ title: Site Features
 bookToC: true
 bookFlatSection: true
 bookCollapseSection: true
+weight: 99
 ---
 
 # Site Features
