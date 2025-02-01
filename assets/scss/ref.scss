@@ -1,0 +1,136 @@
+// Sprite dimensions
+$sprite-width: 2120px;
+$sprite-height: 64px;
+$icon-size: 1.3em;
+$scale-ratio: $sprite-height / $icon-size;
+
+// Individual icons for non-sprite images
+$category-icons: (
+    "duty": (
+        "variant",
+        "deep",
+        "field",
+    ),
+);
+// Organized sprite positions map
+$sprite-categories: (
+    "duty": (
+        "dungeon": 180px,
+        "guildhest": 244px,
+        "chaotic": 308px,
+        "pvp": 372px,
+        "raid": 436px,
+        "trial": 500px,
+        "ultimate": 564px,
+    ),
+    "quest": (
+        "normal": 1482px,
+        "repeat": 1546px,
+        "feature": 1610px,
+        "featurerepeat": 1674px,
+        "msq": 1738px,
+        "seasonal": 1802px,
+    ),
+);
+
+/* Icon shortcodes */
+.ref {
+    background-repeat: no-repeat;
+    background-size: 1.3em 1.3em;
+    display: inline-block; // make sure icon is on the same line as text
+    background-color: rgba(128, 128, 128, 0.2); // subtle background
+    border-radius: 4px; // rounded corners
+}
+
+.token-ref {
+    @extend .ref;
+    background-position: right center;
+    padding: 0px 1.3em 0px 4px;
+}
+
+// Generate classes for each category
+@each $category, $sprites in $sprite-categories {
+    .#{$category}-ref {
+        @extend .ref;
+        position: relative;
+        padding: 0px 4px 0px ($icon-size + 0.3em);
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 2px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: $icon-size;
+            height: $icon-size;
+            background-image: url("/icon/eorzea-sprite.png");
+            background-size: ($sprite-width / $sprite-height) *
+                $icon-size
+                $icon-size;
+            background-repeat: no-repeat;
+        }
+
+        // Generate type classes for each category
+        @each $type, $position in $sprites {
+            &--#{$type}::before {
+                background-position: ($position / $scale-ratio) * -1 0;
+            }
+        }
+    }
+}
+
+// Generate classes for individual icons
+@each $category, $icons in $category-icons {
+    .#{$category}-ref {
+        // Generate type classes for each category
+        @each $icon in $icons {
+            &--#{$icon}::before {
+                background-image: url("/icon/#{$category}-#{$icon}.png");
+                background-size: $icon-size $icon-size;
+            }
+        }
+    }
+}
+
+// Base style for Eorzea Database links
+.eorzeadb_link {
+    color: #efc050;
+    background-color: #1a1a1a;
+    transition: background-color 0.2s;
+    border-radius: 4px; // Added border radius
+    display: inline-block; // Ensure proper block formatting
+    text-decoration: none; // Optional: removes underline from links
+
+    &:hover {
+        background-color: rgba(128, 128, 128, 0.5);
+    }
+    &:visited {
+        color: #efc050 !important;
+    }
+
+    // Ensure contained icons maintain their styling
+    .quest-ref,
+    .duty-ref {
+        background-color: transparent; // Remove default icon background
+    }
+}
+
+// Additional style for DB icon when needed
+.db-ref {
+    @extend .ref;
+    background-image: url("icon/eorzea.png");
+    background-position: left 2px center;
+    padding: 0px 4px 0px ($icon-size + 0.3em);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    // Still allows text to be copied
+}

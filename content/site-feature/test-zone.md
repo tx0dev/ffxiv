@@ -1,37 +1,47 @@
 ---
 title: The Lab
-bookToC: true
+bookToC: false
 ---
 
 # The Lab
 
-## Testing Eorzea Tooltip
+## Testing Tooltip
 
-Testing the [Eorzea Tooltip](https://na.finalfantasyxiv.com/lodestone/special/fankit/tooltip/) functionality.
+Should not have two icons.
+
+| Type   | Link |
+|--------|------|
+| Quest  | {{< ref quest=msq db="quest=7a0da925036" >}}Dawntrail{{< /ref >}} |
+| Side | {{< ref quest=normal db="quest=7a0da925036" >}}Dawntrail{{< /ref >}} |
+| Duty | {{< ref duty=dungeon db="duty=259c37be2ea" >}}Ihuykatumu{{< /ref >}} |
+| Item | {{< ref text="Dreadwyrm Blade" db="item=b2cab67854f" />}} |
+| Nothing | {{< ref >}}Dawntrail{{< /ref >}} |
+## Sprite
+
+![Eorzea Sprite](/icon/eorzea-sprite.png)
 
 {{% columns %}}
-
-### HTTML
-
-* **Items** <a href="https://na.finalfantasyxiv.com/lodestone/playguide/db/item/b2cab67854f/" class="eorzeadb_link">Dreadwyrm Blade</a>
-* **Quests** <a href="https://na.finalfantasyxiv.com/lodestone/playguide/db/quest/2ba6b3e60da/" class="eorzeadb_link">The Ultimate Weapon</a>
-* **Duty** <a href="https://na.finalfantasyxiv.com/lodestone/playguide/db/duty/b229b89b3a8/" class="eorzeadb_link">Sastasha</a>
-* **NPCs** <a href="https://na.finalfantasyxiv.com/lodestone/playguide/db/npc/npc/1d469fa94c9/" class="eorzeadb_link">Minfilia</a>
-* **Crafting Log** <a href="https://na.finalfantasyxiv.com/lodestone/playguide/db/recipe/f3ffcf2c8fd/" class="eorzeadb_link">Maple Lumber</a>
-* **Gathering Log** <a href="https://na.finalfantasyxiv.com/lodestone/playguide/db/gathering/d7b84518d1d/" class="eorzeadb_link">Fire Shard</a>
-* **Achievements** <a href="https://na.finalfantasyxiv.com/lodestone/playguide/db/achievement/113bfb1245d/" class="eorzeadb_link">To Crush Your Enemies I</a>
-* **Text Commands** <a href="https://na.finalfantasyxiv.com/lodestone/playguide/db/text_command/972d1f180ca/" class="eorzeadb_link">/say</a>
+| Sprite      | Link  |
+|-------------|-------|
+| Dungeon     | {{< ref duty=dungeon >}}Yuweyawata Field Station{{< /ref >}} |
+| Guildhest   | {{< ref duty=guildhest >}}Solemn Trinity{{< /ref >}} |
+| Chaotic     | {{< ref duty=chaotic >}}The Cloud of Darkness{{< /ref >}} |
+| PvP         | {{< ref duty=pvp >}}Crystalline Conflict (Casual Match){{< /ref >}} |
+| Raid        | {{< ref duty=raid >}}AAC Light-heavyweight M4{{< /ref >}} |
+| Trial       | {{< ref duty=trial >}}The Minstrel's Ballad: Sphene's Burden{{< /ref >}} |
+| Ultimate    | {{< ref duty=ultimate >}}The Weapon's Refrain{{< /ref >}} |
+| Variant     | {{< ref duty=variant >}}The Sil'dihn Subterrane{{< /ref >}} |
+| Deep Dungeon| {{< ref duty=deep >}}Palace of the Dead{{< /ref >}} |
+| field       | {{< ref duty=field href="https://ffxiv.consolegameswiki.com/wiki/The_Forbidden_Land,_Eureka" >}}The Forbidden Land, Eureka{{< /ref >}} |
 
 <--->
 
-### Shortcode
-
-* **Items** {{< db item=b2cab67854f >}}Dreadwyrm Blade{{< /db >}}
-* **Quests** {{< db quest=2ba6b3e60da >}}The Ultimate Weapon{{< /db >}}
-* **Duty** {{< db duty=b229b89b3a8 >}}Sastasha {{< /db >}}
-* **NPCs** {{< db npc=1d469fa94c9 >}}Minfilia{{< /db >}}
-* **Crafting Log** {{< db recipe=f3ffcf2c8fd >}}Maple Lumber{{< /db >}}
-* **Gathering Log**{{< db gathering=d7b84518d1d >}}Fire Shard{{< /db >}}
-* **Achievements**{{< db achievement=113bfb1245d >}}To Crush Your Enemies I{{< /db >}}
-* **Text Commands** {{< db text_command=972d1f180ca >}} /say {{< /db >}}
+| Quest Type  | Link |
+|-------------|------|
+| Normal      | {{< ref quest=normal >}}A Ceremony of Celebration{{< /ref >}} |
+| Repeat      | {{< ref quest=repeat >}}Supply and Demand{{< /ref >}} |
+| Feature     | {{< ref quest=feature >}}Rise and Shine{{< /ref >}} |
+| Feature Repeat | {{< ref quest=featurerepeat >}}House of Splendid Ancestors{{< /ref >}} |
+| MSQ         | {{< ref quest=msq >}}The Ultimate Weapon{{< /ref >}} |
+| Seasonal    | {{< ref quest=seasonal >}}Breaking Brick Mountains{{< /ref >}} |
 {{% /columns %}}

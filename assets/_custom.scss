@@ -1,50 +1,6 @@
 @import "scss/gallery.scss";
 @import "scss/lightbox.scss";
-
-/* Icon shortcodes*/
-.icon {
-    background-repeat: no-repeat;
-    background-size: 1.3em 1.3em;
-    display: inline-block; // make sure icon is on the same line as text
-    background-color: rgba(128, 128, 128, 0.2); // subtle background
-    border-radius: 4px; // rounded corners
-}
-.quest-icon {
-    @extend .icon;
-    background-position: left 2px center;
-    padding: 0px 4px 0px 1.3em;
-}
-.token-icon {
-    @extend .icon;
-    background-position: right center;
-    padding: 0px 1.3em 0px 4px;
-}
-.db-icon {
-    @extend .icon;
-    color: #efc050;
-    background-color: #1a1a1a;
-    background-image: url("icon/eorzea.png");
-    background-position: left 2px center;
-    padding: 0px 4px 0px 1.5em;
-    transition: background-color 0.2s; // smooth hover effect
-    &:hover {
-        background-color: rgba(128, 128, 128, 0.5); // darker on hover
-    }
-    &:visited {
-        color: #efc050 !important;
-    }
-}
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-    // Still allows text to be copied
-}
+@import "scss/ref.scss";
 
 #eorzeadb_tooltip {
     overflow: inherit !important;

@@ -11,11 +11,16 @@ bookCollapseSection: true
 
 ### Currencies
 ```tpl
-It will cost {{</* currency 100 "poetics" */>}}.
+{{</* currency <text> <type> */>}}
 ```
 
+{{% columns %}}
 > It will cost {{<currency 100 "poetics" >}}.
-
+<--->
+```tpl
+It will cost {{</* currency 100 "poetics" */>}}.
+```
+{{% /columns %}}
 #### Option
 
 Not all currency are present, since not all of them are used, so here's the list:
@@ -29,24 +34,53 @@ Not all currency are present, since not all of them are used, so here's the list
 * `allied` Allied Seal
 * `bicolor` Bicolor Gemstone
 
-### Quests
+### Game References
 
 ```tpl
-Complete the {{</* quest "Trial of the Braves" "feature" */>}}.
+{{</* ref [quest=""|duty=""] [db=""|href=""] text="" / */>}}
+{{</* ref [quest=""|duty=""] [db=""|href=""] */>}}Dawntrail{{</* /ref */>}}
 ```
 
-> Complete the {{< quest "Trial of the Braves" "feature" >}}.
+{{%columns %}}
+> Complete the {{< ref text="Trial of the Braves" quest=feature />}}. \
+> Last MSQ {{< ref quest=msq db="quest=7a0da925036" >}}Dawntrail{{</ref>}}. \
+> {{< ref duty=chaotic >}}The Cloud of Darkness (Chaotic) {{< /ref >}} was added in 7.15.
+<--->
+```tpl
+Complete the {{</* ref text="Trial of the Braves" quest=feature / */>}}. \
+Last MSQ {{</* ref quest=msq db="quest=7a0da925036" */>}}Dawntrail{{</* /ref */>}}. \
+{{</* ref duty=chaotic */>}}The Cloud of Darkness (Chaotic) {{</* /ref */>}} was added in 7.15.
+```
+{{% /columns %}}
 
-#### Otions
+#### Options
 
-* `normal` Quest
-* `feature` Feature quest
-* `msq` Main Story quest
-* `leve` Levequest
-* `other` Other quest
-* `featurerepeat` Repeatable feature quest
-* `normalrepeat` Repeatable quest
+The `ref` shortcode encompasses most of the game references. It supports inline or wrapping, and automatic linking to the Eaorzea Database, including Tooltip.
 
+You can specific `quest` or `duty` to show the appropriate icon.
+
+`quest` options are: `normal`, `repeat`, `feature`, `featurerepeat`, `msq`, `seasonal`. \
+`duty` options are: `dungeon`, `guildhest`, `chaotic`, `pvp`, `raid`, `trial`, `ultimate`, `variant`, `deep`, `field`.
+
+#### Database Linking
+
+The `db` option must specific the type and the id in the format `type=id`. On the Eorzea DB, the display tooltip code show the two value:
+
+```text
+[db:duty=944ebdbd874]The Jade Stoa (Unreal)[/db:duty]
+```
+In this case, the value of `db` would be `duty=944ebdbd874`:
+{{%columns ratio=1:2 %}}
+> {{< ref db="duty=944ebdbd874" >}}The Jade Stoa (Unreal){{< /ref >}} \
+> {{< ref duty=trial db="duty=944ebdbd874" >}}The Jade Stoa (Unreal){{< /ref >}}
+<--->
+```tpl
+{{</* ref db="duty=944ebdbd874" */>}}The Jade Stoa (Unreal){{</* /ref */>}}
+{{</* ref duty=trial db="duty=944ebdbd874" */>}}The Jade Stoa (Unreal){{</* /ref */>}}
+```
+{{% /columns %}}
+
+You can also have arbitrary link with the `href` option.
 
 ### Bundle gallery
 

@@ -1,0 +1,82 @@
+{{/* layouts/shortcodes/game-ref.html */}}
+{{- $types := dict
+    "item" "item"
+    "quest" "quest"
+    "duty" "duty"
+    "npc" "npc/npc"
+    "enemy" "npc/enemy"
+    "recipe" "recipe"
+    "gathering" "gathering"
+    "achievement" "achievement"
+    "text_command" "text_command"
+    "shop" "shop"
+-}}
+
+{{- $questTypes := dict
+    "normal" "Quest"
+    "feature" "Feature quest"
+    "msq" "Main Story quest"
+    "leve" "Levequest"
+    "other" "Other quest"
+    "featurerepeat" "Repeatable feature quest"
+    "normalrepeat" "Repeatable quest"
+-}}
+
+{{- $dutyTypes := dict
+    "dungeon" "Dungeon"
+    "guildhest" "Guildhest"
+    "chaotic" "Chaotic"
+    "pvp" "PvP"
+    "raid" "Raid"
+    "trial" "Trial"
+    "ultimate" "Ultimate Raid"
+    "variant" "Variant Dungeon"
+    "deep" "Deep Dungeon"
+    "field" "Field Opertations"
+-}}
+
+{{- $text := .Get "text" | default .Inner -}}
+{{- $questType := .Get "quest" -}}
+{{- $dutyType := .Get "duty" -}}
+{{- $dbRef := .Get "db" -}}
+{{- $href := .Get "href" -}}
+
+{{/* Parse DB reference */}}
+{{- $dbType := "" -}}
+{{- $dbId := "" -}}
+{{- if $dbRef -}}
+    {{- $parts := split $dbRef "=" -}}
+    {{- if ge (len $parts) 2 -}}
+        {{- $dbType = index $parts 0 -}}
+        {{- $dbId = index $parts 1 -}}
+    {{- end -}}
+{{- end -}}
+
+{{/* Build content with appropriate icon */}}
+{{- $content := "" -}}
+{{- $hasIcon := false -}}
+{{- if $questType -}}
+    {{- $hasIcon = true -}}
+    {{- $questTitle := index $questTypes $questType -}}
+    {{- $content = printf `<span class="quest-ref quest-ref--%s" title="%s">%s<span class="sr-only"> %s</span></span>` $questType $questTitle $text $questTitle -}}
+{{- else if $dutyType -}}
+    {{- $hasIcon = true -}}
+    {{- $dutyTitle := index $dutyTypes $dutyType -}}
+    {{- $content = printf `<span class="duty-ref duty-ref--%s" title="%s">%s<span class="sr-only"> %s</span></span>` $dutyType $dutyTitle $text $dutyTitle -}}
+{{- else -}}
+    {{- $content = $text -}}
+{{- end -}}
+
+{{/* Wrap with appropriate link if needed */}}
+{{- if and $dbType $dbId (isset $types $dbType) -}}
+    {{- $dbPath := index $types $dbType -}}
+    {{- if $hasIcon -}}
+        <a href="https://na.finalfantasyxiv.com/lodestone/playguide/db/{{ $dbPath }}/{{ $dbId }}/" class="eorzeadb_link">{{ $content | safeHTML }}</a>
+    {{- else -}}
+        <a href="https://na.finalfantasyxiv.com/lodestone/playguide/db/{{ $dbPath }}/{{ $dbId }}/" class="eorzeadb_link db-ref">{{ $content | safeHTML }}</a>
+    {{- end -}}
+{{- else if $href -}}
+    <a href="{{ $href }}">{{ $content | safeHTML }}</a>
+{{- else -}}
+    <span class="ref" style="padding: 0 4px">{{ $content | safeHTML }}</span>
+{{- end -}}
