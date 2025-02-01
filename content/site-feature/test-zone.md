@@ -17,6 +17,8 @@ Should not have two icons.
 | Item | {{< ref text="Dreadwyrm Blade" db="item=b2cab67854f" />}} |
 | Nothing | {{< ref >}}Dawntrail{{< /ref >}} |
 | currency | {{< currency 1000 poetics >}} |
+| NPC mob | {{< ref npc=mob db="enemy=557f0907421" text="Galvanth The Dominator"  />}}
+| NPC Levemete | {{< ref npc=levemete text="Lodille"  />}}
 
 ## Sprite
 

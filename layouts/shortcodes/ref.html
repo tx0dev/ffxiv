@@ -16,10 +16,11 @@
     "normal" "Quest"
     "feature" "Feature quest"
     "msq" "Main Story quest"
-    "leve" "Levequest"
+    "levequest" "Levequest"
     "other" "Other quest"
     "featurerepeat" "Repeatable feature quest"
     "normalrepeat" "Repeatable quest"
+    "levequest" "Levequest"
 -}}
 
 {{- $dutyTypes := dict
@@ -35,9 +36,25 @@
     "field" "Field Opertations"
 -}}
 
+{{- $fateTypes := dict
+    "boss" "Kill Boss"
+    "chase" "Chase"
+    "collect" "Collect"
+    "defend" "Defend"
+    "escort" "Escort"
+    "fate" "FATE"
+    "slay" "Kill Enemies"
+-}}
+{{- $npcTypes := dict
+    "levemete" "Guildleve NPC"
+    "mob" "Monster"
+-}}
+
 {{- $text := .Get "text" | default .Inner -}}
 {{- $questType := .Get "quest" -}}
 {{- $dutyType := .Get "duty" -}}
+{{- $fateType := .Get "fate" -}}
+{{- $npcType := .Get "npc" -}}
 {{- $dbRef := .Get "db" -}}
 {{- $href := .Get "href" -}}
 
@@ -63,6 +80,14 @@
     {{- $hasIcon = true -}}
     {{- $dutyTitle := index $dutyTypes $dutyType -}}
     {{- $content = printf `<span class="duty-ref duty-ref--%s" title="%s">%s<span class="sr-only"> %s</span></span>` $dutyType $dutyTitle $text $dutyTitle -}}
+{{- else if $fateType -}}
+    {{- $hasIcon = true -}}
+    {{- $fateTitle := index $fateTypes $fateType -}}
+    {{- $content = printf `<span class="fate-ref fate-ref--%s" title="%s">%s<span class="sr-only"> %s</span></span>` $fateType $fateTitle $text $fateTitle -}}
+{{- else if $npcType -}}
+    {{- $hasIcon = true -}}
+    {{- $npcTitle := index $npcTypes $npcType -}}
+    {{- $content = printf `<span class="npc-ref npc-ref--%s" title="%s">%s<span class="sr-only"> %s</span></span>` $npcType $npcTitle $text $npcTitle -}}
 {{- else -}}
     {{- $content = $text -}}
 {{- end -}}
@@ -73,7 +98,7 @@
     {{- if $hasIcon -}}
         <a href="https://na.finalfantasyxiv.com/lodestone/playguide/db/{{ $dbPath }}/{{ $dbId }}/" class="eorzeadb_link">{{ $content | safeHTML }}</a>
     {{- else -}}
-        <a href="https://na.finalfantasyxiv.com/lodestone/playguide/db/{{ $dbPath }}/{{ $dbId }}/" class="eorzeadb_link db-ref">{{ $content | safeHTML }}</a>
+        <a href="https://na.finalfantasyxiv.com/lodestone/playguide/db/{{ $dbPath }}/{{ $dbId }}/" class="eorzeadb_link db-icon">{{ $content | safeHTML }}</a>
     {{- end -}}
 {{- else if $href -}}
     <a href="{{ $href }}">{{ $content | safeHTML }}</a>
