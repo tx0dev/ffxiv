@@ -77,6 +77,8 @@
     {{- end -}}
 {{- else if $href -}}
     <a href="{{ $href }}">{{ $content | safeHTML }}</a>
+{{- else if $hasIcon -}}
+    {{ $content | safeHTML }}
 {{- else -}}
     <span class="ref" style="padding: 0 4px">{{ $content | safeHTML }}</span>
 {{- end -}}
