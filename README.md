@@ -54,10 +54,14 @@ A gallery [shortcode](layouts/shortcodes/bundle-gallery.html) that look for page
 
 ## Roadmap
 
-- [ ] Add current extreme and savage guide
-- [ ] SBOM for SQEX assets
-- [x] Maybe "standardize" link references
 - [x] Get the [FFXIV Tooltip](https://eu.finalfantasyxiv.com/lodestone/special/fankit/tooltip/) working
+- [x] Maybe "standardize" link references
+- [ ] SBOM for SQEX assets
+- [ ] Improve gallery shortcode
+- [ ] Current extreme and savage guide
+- [ ] Complete the ARR relic weapon (going through it right now)
+- [ ] Basic game info, mostly mechanics
+- [ ] DoL/DoH reference and powerleveling (Did CUL, just need to do the other)
 
 ## Copyright
 
