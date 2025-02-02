@@ -13,7 +13,7 @@
 {{- $title := index $titles $type -}}
 
 <span
-    class="token-ref token-ref--{{ $type }}"
+    class="xiv-token xiv-token--{{ $type }}"
     title="{{ $title }}"
 >{{ $text | safeHTML }}<span class="sr-only"> {{ $title }}</span></span>
 {{- /* end */ -}}

@@ -11,7 +11,7 @@ Due to the strict item level (IL) sync of unreal trials, it is not possible to o
 
 ### Current Unreal Trial
 
-{{% ref duty=trial db="duty=944ebdbd874" %}}The Jade Stoa (Unreal){{% /ref %}} introduced in Patch 7.1. \
+{{% xiv duty=trial db="duty=944ebdbd874" %}}The Jade Stoa (Unreal){{% /xiv %}} introduced in Patch 7.1. \
 Rewards: {{< currency 10 aesthetics >}}, {{< currency 20 heliometry >}} & Faux Hollows attempt for this week.
 
 * Average Item Level: 690
@@ -20,9 +20,9 @@ Rewards: {{< currency 10 aesthetics >}}, {{< currency 20 heliometry >}} & Faux H
 #### PF Strat
 
 * LP1 takes first throw stack, LP2 second throw stack
-* Healers/Range Casters take the orbs (physical down debuff) on tiger (can take more than one); melee and tanks only take if healers/range casters can’t grab in time
+* Healers/Range Casters take the orbs (physical down debuff) on tiger (can take more than one); melee and tanks only take if healers/range casters can't grab in time
 * For dropping the AOE, DPS drops on A/Red, Healer on B/Green and Tank on C/Blue
-* **Cheese** For second appearance of tiger, Tank LB3 is used on {{< ref >}}The Roar of Thunder{{</ref>}} to invuln group
+* **Cheese** For second appearance of tiger, Tank LB3 is used on {{< xiv >}}The Roar of Thunder{{</xiv>}} to invuln group
 
 {{< details title="Visual Guide" >}}
 {{< youtube fc8SmEmu5aw >}}

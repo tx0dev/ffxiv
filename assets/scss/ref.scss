@@ -67,7 +67,7 @@ $sprite-icons: (
 );
 
 /* Baseline "pill" for ref and currency */
-.ref {
+.xiv {
     background-repeat: no-repeat;
     background-size: 1.3em 1.3em;
     position: relative;
@@ -76,8 +76,8 @@ $sprite-icons: (
     border-radius: 4px; // rounded corners
 }
 
-.token-ref {
-    @extend .ref;
+.xiv-token {
+    @extend .xiv;
     background-position: right center;
     padding: 0px ($icon-size + 0.3em) 0px 4px;
     &::after {
@@ -101,8 +101,8 @@ $sprite-icons: (
 
 // Generate classes for individual icons
 @each $category, $icons in $categories-icons {
-    .#{$category}-ref {
-        @extend .ref;
+    .xiv-#{$category} {
+        @extend .xiv;
         padding: 0px 4px 0px ($icon-size + 0.3em);
 
         &::before {
@@ -132,7 +132,7 @@ $sprite-icons: (
 
 @each $category, $sprites in $sprite-icons {
     // Generate type classes for each category
-    .#{$category}-ref {
+    .xiv-#{$category} {
         @each $type, $position in $sprites {
             &--#{$type}::before {
                 @extend .sprite-baseline;
@@ -159,15 +159,16 @@ $sprite-icons: (
     }
 
     // Ensure contained icons maintain their styling
-    .quest-ref,
-    .duty-ref {
-        background-color: transparent; // Remove default icon background
+    @each $category, $icons in $categories-icons {
+        .xiv-#{$category} {
+            background-color: transparent; // Remove default icon background
+        }
     }
 }
 
 // Additional style for DB icon when needed
-.db-icon {
-    @extend .ref;
+.xiv-db {
+    @extend .xiv;
     background-image: url("icon/eorzea.png");
     background-position: left 2px center;
     padding: 0px 4px 0px ($icon-size + 0.3em);
