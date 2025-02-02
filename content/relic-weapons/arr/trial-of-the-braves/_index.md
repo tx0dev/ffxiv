@@ -115,9 +115,9 @@ Raise Vitality
 - {{< xiv fate=boss text="Breaking Dawn" />}}
 
 #### Levequests
-- {{< xiv quest=levequest text="Circling the Ceruleum" />}} from {{< xiv db="npc=13e3732e26b" npc=levemete text="Rurubana" />}}
-- {{< xiv quest=levequest text="Go Home to Mama" />}} from {{< xiv npc=levemete text="Eidhart" />}}
-- {{< xiv quest=levequest text="Necrologos: Whispers of the Gem" />}} from {{< xiv npc=levemete text="Voilinaut" />}}
+- {{< xiv quest=levequest text="Someone's in the Doghouse" />}} from {{< xiv db="npc=13e3732e26b" npc=levemete text="Rurubana" />}}
+- {{< xiv quest=levequest text="Get Off Our Lake" />}} from {{< xiv npc=levemete text="Eidhart" />}}
+- {{< xiv quest=levequest text="The Area's a Bit Sketchy" />}} from {{< xiv npc=levemete text="Voilinaut" />}}
 
 {{< details title="Maps" >}}
 {{<bundle-gallery prefix="skyfall_2" >}}
