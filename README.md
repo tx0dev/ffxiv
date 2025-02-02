@@ -40,7 +40,7 @@ draw a simple box with the current icon. Take 2 arguments, the amount and the cu
 A simple reference to a quest, duty or anything in the Eorzea DB. It can be inline or wrapping.
 
 ```markdown
-{{< ref quest=msq db="quest=7a0da925036" >}}Dawntrail{{< /ref >}}
+{{< xiv quest=msq db="quest=7a0da925036" >}}Dawntrail{{< /xiv >}}
 ```
 If `db` is specified, it will automatically link to the [Eorzea Database](https://eu.finalfantasyxiv.com/lodestone/playguide/db/).
 

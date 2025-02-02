@@ -1,5 +1,5 @@
 // Individual icons for non-sprite images
-$categories-icons: (
+$xiv-icons: (
     "duty": (
         "variant",
         "deep",
@@ -100,7 +100,7 @@ $sprite-icons: (
 }
 
 // Generate classes for individual icons
-@each $category, $icons in $categories-icons {
+@each $category, $icons in $xiv-icons {
     .xiv-#{$category} {
         @extend .xiv;
         padding: 0px 4px 0px ($icon-size + 0.3em);
@@ -159,7 +159,7 @@ $sprite-icons: (
     }
 
     // Ensure contained icons maintain their styling
-    @each $category, $icons in $categories-icons {
+    @each $category, $icons in $xiv-icons {
         .xiv-#{$category} {
             background-color: transparent; // Remove default icon background
         }
