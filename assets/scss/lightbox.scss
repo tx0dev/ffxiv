@@ -1,7 +1,7 @@
 .lightbox {
     padding: 0;
     border: none;
-    background: rgba(0, 0, 0, 0.85); // Made slightly transparent
+    background: rgba(0, 0, 0, 0.66);
     width: 100vw;
     height: 100vh;
     max-width: 100vw;
@@ -9,7 +9,7 @@
     margin: 0;
 
     &::backdrop {
-        background: rgba(0, 0, 0, 0.5); // Made backdrop more transparent
+        background: rgba(0, 0, 0, 0.6);
     }
 
     &__container {
