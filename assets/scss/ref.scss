@@ -94,7 +94,7 @@ $sprite-icons: (
     // Generate type classes for each category
     @each $currency in $currencies {
         &--#{$currency}::after {
-            background-image: url("/icon/currency-#{$currency}.png");
+            background-image: url("/xiv/currency/#{$currency}.png");
         }
     }
 }
@@ -118,7 +118,7 @@ $sprite-icons: (
 
         @each $icon in $icons {
             &--#{$icon}::before {
-                background-image: url("/icon/#{$category}-#{$icon}.png");
+                background-image: url("/xiv/#{$category}/#{$icon}.png");
                 background-size: $icon-size $icon-size;
             }
         }
@@ -126,7 +126,7 @@ $sprite-icons: (
 }
 // Generate classes for each category
 .sprite-baseline {
-    background-image: url("/icon/eorzea-sprite.png");
+    background-image: url("/xiv/eorzea-sprite.png");
     background-size: ($sprite-width / $sprite-height) * $icon-size $icon-size;
 }
 
@@ -169,7 +169,7 @@ $sprite-icons: (
 // Additional style for DB icon when needed
 .xiv-db {
     @extend .xiv;
-    background-image: url("icon/eorzea.png");
+    background-image: url("xiv/eorzea-db.png");
     background-position: left 2px center;
     padding: 0px 4px 0px ($icon-size + 0.3em);
 }
