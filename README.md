@@ -8,6 +8,7 @@ It's available at https://ffxiv.tx0.dev, hosted on [pico.sh](https://pico.sh/).
 
 Install [Hugo](https://gohugo.io/).
 We're using the very simple [Hugo-Book](https://github.com/alex-shpak/hugo-book) theme.
+Most of the FFXIV functionality are in a seperate [Hugo module](https://github.com/tx0dev/hugo-xiv) for people to use on their own sites.
 
 ```sh
 hugo serve --disableFastRender
@@ -23,41 +24,14 @@ To take advantage of the pico.sh [image optimization](https://pico.sh/images#ima
 hugo --environment pico
 rsync -rv public/ pgs.sh:/ffxiv
 ```
-## Features
 
-### Shortcodes
-
-#### Currency
-
-draw a simple box with the current icon. Take 2 arguments, the amount and the currency name. current default to `gil` if not provided. check the [shortcodes file](layouts/shortcodes/currency.html) for the full list of currency.
-
-```markdown
-{{< currency 000 "poetics" >}}
-```
-
-#### Game Reference
-
-A simple reference to a quest, duty or anything in the Eorzea DB. It can be inline or wrapping.
-
-```markdown
-{{< xiv quest=msq db="quest=7a0da925036" >}}Dawntrail{{< /xiv >}}
-```
-If `db` is specified, it will automatically link to the [Eorzea Database](https://eu.finalfantasyxiv.com/lodestone/playguide/db/).
-
-#### Bundle Gallery
-
-A gallery [shortcode](layouts/shortcodes/bundle-gallery.html) that look for page bundle file and render them.
-
-```markdown
-{{< bundle-gallery >}}
-```
+_Note: The implementation of this could be better as it's just a variable check in the templates. Dunno where it would be in the Hugo render/pip hooks._
 
 ## Roadmap
 
-- [x] Get the [FFXIV Tooltip](https://eu.finalfantasyxiv.com/lodestone/special/fankit/tooltip/) working
-- [x] Maybe "standardize" link references
+Moved the site functionality to the [Hugo XIV module](http://github.com/tx0dev/hugo-xiv).
+
 - [ ] SBOM for SQEX assets
-- [ ] Improve gallery shortcode
 - [ ] Current extreme and savage guide
 - [ ] Complete the ARR relic weapon (going through it right now)
 - [ ] Basic game info, mostly mechanics
@@ -65,6 +39,6 @@ A gallery [shortcode](layouts/shortcodes/bundle-gallery.html) that look for page
 
 ## Copyright
 
-Some images, contents, and assets © SQUARE ENIX CO., LTD. All rights reserved.
 
-FINAL FANTASY is a registered trademark of Square Enix Holdings Co., Ltd.
+FINAL FANTASY is a registered trademark of Square Enix Holdings Co., Ltd. \
+Some images, contents, and assets © SQUARE ENIX - Used under the [Material Usage License](https://support.na.square-enix.com/rule.php?id=5382&tag=authc).

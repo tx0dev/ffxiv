@@ -13,6 +13,9 @@ unsafe = true
 [[module.imports]]
 path = 'github.com/alex-shpak/hugo-book'
 
+[[module.imports]]
+path = 'github.com/tx0dev/hugo-xiv'
+
 [menu]
 [[menu.after]]
 name = 'Lodestone'
