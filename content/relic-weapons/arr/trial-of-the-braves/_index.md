@@ -33,7 +33,6 @@ Raise Mind
 - {{< xiv quest=levequest text="The Awry Salvages" />}} from {{< xiv npc=levemete text="Eidhart" />}}
 
 {{< details title="Maps" >}}
-{{<bundle-gallery prefix="skyfire_1" >}}
 {{< /details >}}
 
 ### Book of Skyfire II
@@ -54,7 +53,6 @@ Raise Mind
 - {{< xiv quest=levequest text="The Museum Is Closed" />}} from {{< xiv npc=levemete text="Eidhart" />}}
 
 {{< details title="Maps" >}}
-{{<bundle-gallery prefix="skyfire_2" >}}
 {{< /details >}}
 
 ### Book of Netherfire I
@@ -75,7 +73,6 @@ Raise Mind
 - {{< xiv quest=levequest text="One Big Problem Solved" />}} from {{< xiv npc=levemete text="Eidhart" />}}
 
 {{< details title="Maps" >}}
-{{<bundle-gallery prefix="netherfire" >}}
 {{< /details >}}
 
 ## Books of Fall
@@ -99,7 +96,6 @@ Raise Vitality
 - {{< xiv quest=levequest text="Go Home to Mama" />}} from {{< xiv npc=levemete text="Eidhart" />}}
 
 {{< details title="Maps" >}}
-{{<bundle-gallery prefix="skyfall_1" >}}
 {{< /details >}}
 
 ### Book of Skyfall II
@@ -120,7 +116,6 @@ Raise Vitality
 - {{< xiv quest=levequest text="The Area's a Bit Sketchy" />}} from {{< xiv npc=levemete text="Voilinaut" />}}
 
 {{< details title="Maps" >}}
-{{<bundle-gallery prefix="skyfall_2" >}}
 {{< /details >}}
 
 ### Book of Netherfall I
@@ -141,7 +136,6 @@ Raise Vitality
 - {{< xiv quest=levequest text="Who Writes History" />}} from {{< xiv npc=levemete text="Eidhart" />}}
 
 {{< details title="Maps" >}}
-{{<bundle-gallery prefix="netherfall" >}}
 {{< /details >}}
 
 ## Books of Wind
@@ -165,7 +159,6 @@ Raise Spell Speed
 - {{< xiv quest=levequest text="Big, Bad Idea" />}} from {{< xiv npc=levemete db="npc=1b32b4ff5a7" text="K'leytai" />}}
 
 {{< details title="Maps" >}}
-{{<bundle-gallery prefix="skywind_1" >}}
 {{< /details >}}
 
 ### Book of Skywind II
@@ -186,7 +179,6 @@ Raise Spell Speed
 - {{< xiv quest=levequest text="Put Your Stomp on It" />}} from {{< xiv npc=levemete db="npc=1b32b4ff5a7" text="K'leytai" />}}
 
 {{< details title="Maps" >}}
-{{<bundle-gallery prefix="skywind_2" >}}
 {{< /details >}}
 
 ## Book of Earth
@@ -210,5 +202,4 @@ Raise Determination
 - {{< xiv quest=levequest text="No Big Whoop" />}} from {{< xiv npc=levemete text="Lodille" />}}
 
 {{< details title="Maps" >}}
-{{<bundle-gallery prefix="skyearth" >}}
 {{< /details >}}

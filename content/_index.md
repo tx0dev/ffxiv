@@ -6,13 +6,18 @@ bookToc: false
 
 # Soktai FFXIV Reference
 
-![7.1 Crossroads](https://lds-img.finalfantasyxiv.com/promo/h/0/_9pS37ahc1lqA9Sf-s4KMpl7KM.png)
+{{% columns ratio=2:1 %}}
+[![Crossroads logo](https://lds-img.finalfantasyxiv.com/promo/h/0/_9pS37ahc1lqA9Sf-s4KMpl7KM.png)](https://eu.finalfantasyxiv.com/dawntrail/patch_7_1)
+<--->
+[![Dawntrail Logo](https://lds-img.finalfantasyxiv.com/promo/h/5/CxQyapiceRAGCsJ2U0l7C9Wq38.png)](https://na.finalfantasyxiv.com/dawntrail)
+{{% /columns %}}
+
 {{% columns ratio=1:2 %}}
-**Patch** [7.1 Crossroads](https://eu.finalfantasyxiv.com/dawntrail/patch_7_1) \
+**Patch** [7.1 Crossroads](https://eu.finalfantasyxiv.com/dawntrail/patch_7_1) _2024-11-12_\
 Current: 7.16 (January 21, 2025)
 
 **Next patch** 7.2 \
-Estimated: March 2025
+Estimated: _March 2025_
 <--->
 [![](https://img.finalfantasyxiv.com/t/3c04a3a968d20cad8b17e35d37aa9cae6ff8960a.png?1737455030)](https://eu.finalfantasyxiv.com/lodestone/topics/detail/3c04a3a968d20cad8b17e35d37aa9cae6ff8960a)
 {{% /columns %}}
@@ -26,4 +31,4 @@ Details
 
 <div style="font-size:0.8em; text-align:right;">
 FINAL FANTASY is a registered trademark of Square Enix Holdings Co., Ltd.<br>
-Images, contents, and assets © SQUARE ENIX - Used under <a href="https://support.na.square-enix.com/rule.php?id=5382&tag=authc">Material Usage License</a>.</div>
+Some images, contents, and assets © SQUARE ENIX - Used under the <a href="https://support.na.square-enix.com/rule.php?id=5382&tag=authc">Material Usage License</a>.</div>

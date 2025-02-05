@@ -1,0 +1,22 @@
+version = 1
+
+[[annotations]]
+path = ["content/**", "layouts/**"]
+SPDX-FileCopyrightText = "2024 Mathieu C. <mathieu@tx0.dev>"
+SPDX-License-Identifier = "MIT"
+
+[[annotations]]
+path = "content/relic-weapons/arr/trial-of-the-braves/*.png"
+SPDX-FileCopyrightText = "© SQUARE ENIX CO., LTD. All rights reserved."
+SPDX-License-Identifier = "LicenseRef-FFXIV-Materials-Usage"
+
+[[annotations]]
+path = ["README.md"]
+precedence = "override"
+SPDX-FileCopyrightText = "2024 Mathieu C. <mathieu@tx0.dev>"
+SPDX-License-Identifier = "MIT"
+
+[[annotations]]
+path = ["go.mod", ".gitignore", "go.sum"]
+SPDX-FileCopyrightText = "NONE"
+SPDX-License-Identifier = "MIT"

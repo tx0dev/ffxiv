@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2025 Mathieu C. <mathieu@tx0.dev>
+#
+# SPDX-License-Identifier: MIT
+
 baseURL = 'https://soktai.prose.sh/'
 languageCode = 'en-ca'
 title = "Soktai's FFXIV"
