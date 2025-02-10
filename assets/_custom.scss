@@ -5,3 +5,8 @@
  */
 
 @import "scss/xiv.scss";
+
+/* Fix something with my current theme where the toolbox is hidden */
+#eorzeadb_tooltip {
+    overflow: inherit !important;
+}
