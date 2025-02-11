@@ -12,7 +12,7 @@ Due to the strict item level (IL) sync of unreal trials, it is not possible to o
 ### Current Unreal Trial
 
 {{% xiv duty=trial db="duty=944ebdbd874" %}}The Jade Stoa (Unreal){{% /xiv %}} introduced in Patch 7.1. \
-Rewards: {{< currency 10 aesthetics >}}, {{< currency 20 heliometry >}} & Faux Hollows attempt for this week.
+Rewards: {{< tomestone 10 aesthetics >}}, {{< tomestone 20 heliometry >}} & Faux Hollows attempt for this week.
 
 * Average Item Level: 690
 * Item Level Sync: 695

@@ -5,6 +5,9 @@ bookToC: false
 
 # The Lab
 
+{{< call-partial "xiv/pill.html" "aetheryte" "The Goblet" "The Goblet" >}}
+
+
 ## Testing Tooltip
 
 Should not have two icons.
@@ -16,13 +19,10 @@ Should not have two icons.
 | Duty | {{< xiv duty=dungeon db="duty=259c37be2ea" >}}Ihuykatumu{{< /xiv >}} |
 | Item | {{< xiv text="Dreadwyrm Blade" db="item=b2cab67854f" />}} |
 | Nothing | {{< xiv >}}Dawntrail{{< /xiv >}} |
-| currency | {{< currency 1000 poetics >}} |
+| currency | {{< tomestone 1000 poetics >}} |
 | NPC mob | {{< xiv npc=mob db="enemy=557f0907421" text="Galvanth The Dominator"  />}}
 | NPC Levemete | {{< xiv npc=levemete text="Lodille"  />}}
 
-## Sprite
-
-![Eorzea Sprite](/icon/eorzea-sprite.png)
 
 {{% columns %}}
 | Sprite      | Link  |
@@ -31,7 +31,7 @@ Should not have two icons.
 | Guildhest   | {{< xiv duty=guildhest >}}Solemn Trinity{{< /xiv >}} |
 | Chaotic     | {{< xiv duty=chaotic >}}The Cloud of Darkness{{< /xiv >}} |
 | PvP         | {{< xiv duty=pvp >}}Crystalline Conflict (Casual Match){{< /xiv >}} |
-| Raid        | {{< xiv duty=raid >}}AAC Light-heavyweight M4{{< /xiv >}} |
+| Rlaid        | {{< xiv duty=raid >}}AAC Light-heavyweight M4{{< /xiv >}} |
 | Trial       | {{< xiv duty=trial >}}The Minstrel's Ballad: Sphene's Burden{{< /xiv >}} |
 | Ultimate    | {{< xiv duty=ultimate >}}The Weapon's Refrain{{< /xiv >}} |
 | Variant     | {{< xiv duty=variant >}}The Sil'dihn Subterrane{{< /xiv >}} |

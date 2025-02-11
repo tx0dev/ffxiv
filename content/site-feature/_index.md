@@ -12,14 +12,14 @@ weight: 99
 
 ### Currencies
 ```tpl
-{{</* currency <text> <type> */>}}
+{{</* tomestone <text> <type> */>}}
 ```
 
 {{% columns %}}
-> It will cost {{<currency 100 "poetics" >}}.
+> It will cost {{<tomestone 100 "poetics" >}}.
 <--->
 ```tpl
-It will cost {{</* currency 100 "poetics" */>}}.
+It will cost {{</* tomestone 100 "poetics" */>}}.
 ```
 {{% /columns %}}
 #### Option

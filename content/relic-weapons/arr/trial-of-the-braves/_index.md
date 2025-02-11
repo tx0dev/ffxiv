@@ -10,7 +10,7 @@ This requires completing 9 books.
 
 Accept the {{< xiv db="quest=ae51238f704" quest=feature >}}Trial of the Braves{{< /xiv >}} quest from {{< xiv db="npc=cd1713e6dc7" >}}Jalzahn{{< /xiv >}} in North Shroud.
 
-{{< xiv db="npc=740bd200eb8" >}}G'jusana{{< /xiv >}} in Mor Dhona will sell you each books for {{<currency 100 "poetics" >}}. Total cost is {{<currency 900 "poetics" >}}.
+{{< xiv db="npc=740bd200eb8" >}}G'jusana{{< /xiv >}} in Mor Dhona will sell you each books for {{<tomestone 100 "poetics" >}}. Total cost is {{<tomestone 900 "poetics" >}}.
 
 ## Books of Fire
 Raise Mind
