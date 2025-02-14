@@ -13,13 +13,13 @@
   <tbody>
 {{- end -}}
 {{ if or (ne $expansion "HEADER") (ne $expansion "FOOTER") -}}
-    {{- range $societyId, $society := .Site.Data.xiv_society -}}
+    {{- range $societyId, $society := .Site.Data.xiv_societies -}}
       {{- if or (eq $expansion "") (eq $expansion $society.expansion) -}}
       {{- $aetheryteDict := (dict "icon" "aetheryte" "text" $society.location.aetheryte "tooltip" $society.location.map) -}}
         <tr>
           <td>{{ $society.name }}</td>
           <td>{{ partial "xiv/token" (dict "type" $societyId "text" $society.currency "currencyName" $society.currency) }}</td>
-          <td>{{ $society.focus }}</td>
+          <td>{{ delimit $society.focus ", " }}</td>
           <td>{{ $society.location.name }} in {{ $society.location.map }} (x:{{$society.location.x}}, y:{{$society.location.y}})<br> via {{ partial "xiv/pill.html" $aetheryteDict}}</td>
         </tr>
       {{- end -}}

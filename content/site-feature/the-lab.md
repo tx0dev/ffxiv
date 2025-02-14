@@ -15,7 +15,7 @@ Should not have two icons.
 | Type   | Link |
 |--------|------|
 | Quest  | {{< xiv quest=msq db="quest=7a0da925036" >}}Dawntrail{{< /xiv >}} |
-| Side | {{< xiv quest=normal db="quest=7a0da925036" >}}Dawntrail{{< /xiv >}} |
+| Side | {{< xiv quest=side db="quest=7a0da925036" >}}Dawntrail{{< /xiv >}} |
 | Duty | {{< xiv duty=dungeon db="duty=259c37be2ea" >}}Ihuykatumu{{< /xiv >}} |
 | Item | {{< xiv text="Dreadwyrm Blade" db="item=b2cab67854f" />}} |
 | Nothing | {{< xiv >}}Dawntrail{{< /xiv >}} |
@@ -42,10 +42,10 @@ Should not have two icons.
 
 | Quest Type  | Link |
 |-------------|------|
-| Normal      | {{< xiv quest=normal >}}A Ceremony of Celebration{{< /xiv >}} |
+| Side        | {{< xiv quest=side >}}A Ceremony of Celebration{{< /xiv >}} |
 | Repeat      | {{< xiv quest=repeat >}}Supply and Demand{{< /xiv >}} |
 | Feature     | {{< xiv quest=feature >}}Rise and Shine{{< /xiv >}} |
 | Feature Repeat | {{< xiv quest=featurerepeat >}}House of Splendid Ancestors{{< /xiv >}} |
 | MSQ         | {{< xiv quest=msq >}}The Ultimate Weapon{{< /xiv >}} |
-| Seasonal    | {{< xiv quest=seasonal >}}Breaking Brick Mountains{{< /xiv >}} |
+| Other    | {{< xiv quest=other >}}Breaking Brick Mountains{{< /xiv >}} |
 {{% /columns %}}
