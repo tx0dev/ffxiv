@@ -6,28 +6,34 @@ bookToc: false
 
 # Soktai FFXIV Reference
 
-{{% columns ratio=2:1 %}}
+{{% columns ratio=1:1 %}}
 [![Crossroads logo](https://lds-img.finalfantasyxiv.com/promo/h/0/_9pS37ahc1lqA9Sf-s4KMpl7KM.png)](https://eu.finalfantasyxiv.com/dawntrail/patch_7_1)
-<--->
-[![Dawntrail Logo](https://lds-img.finalfantasyxiv.com/promo/h/5/CxQyapiceRAGCsJ2U0l7C9Wq38.png)](https://na.finalfantasyxiv.com/dawntrail)
-{{% /columns %}}
+[![Seekers of Eternity logo](https://lds-img.finalfantasyxiv.com/promo/h/1/GHzwPhGgDKfhkIgs9BemTNta-w.png)](https://na.finalfantasyxiv.com/dawntrail/patch_7_2/)
 
-{{% columns ratio=1:2 %}}
-**Patch** [7.1 Crossroads](https://eu.finalfantasyxiv.com/dawntrail/patch_7_1) _2024-11-12_\
-Current: 7.16 (January 21, 2025)
+**Current Patch** 7.18 (2025-02-24)
 
-**Next patch** 7.2 \
-Estimated: _March 2025_
+**Next patch** [7.2 Seekers of Eternity](https://na.finalfantasyxiv.com/dawntrail/patch_7_2/) \
+Estimated: _Late March 2025_
+
 <--->
-[![](https://img.finalfantasyxiv.com/t/3c04a3a968d20cad8b17e35d37aa9cae6ff8960a.png?1737455030)](https://eu.finalfantasyxiv.com/lodestone/topics/detail/3c04a3a968d20cad8b17e35d37aa9cae6ff8960a)
+[![Dawntrail Logo](https://lds-img.finalfantasyxiv.com/promo/h/p/vZ9Sq3CXXrB-PdQbFMV7KGVh48.png)](https://na.finalfantasyxiv.com/dawntrail)
+## Current Patch ~ 7.18
+[![](https://img.finalfantasyxiv.com/t/250f1d4df14979237c58f5a34f877efc7ef17eed.png?1740451701)](https://eu.finalfantasyxiv.com/lodestone/topics/detail/250f1d4df14979237c58f5a34f877efc7ef17eed)
+
 {{% /columns %}}
 
 ### Letter from the producer
-**Next** [Friday, 7 February 2025 at 11:00 (GMT) / 22:00 (AEDT)](https://na.finalfantasyxiv.com/lodestone/topics/detail/329ad452f96b16dec78666be3114da17c3661196)
+**Next** [Friday, 14 March 2025 at 10:00 (GMT) / 21:00 (AEDT)](https://eu.finalfantasyxiv.com/lodestone/topics/detail/8344f09b9127c2ae3b0af3485d970b56b8d801d9)
 
 Details
-* Patch 7.2 Part 1
+* Patch 7.2 Part 2
 * Miscellaneous Updates
+
+
+### Site update
+
+#### 2025-03-08
+* Added proper support for maps, still needs improvement.
 
 <div style="font-size:0.8em; text-align:right;">
 FINAL FANTASY is a registered trademark of Square Enix Holdings Co., Ltd.<br>

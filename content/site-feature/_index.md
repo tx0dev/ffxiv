@@ -12,11 +12,13 @@ weight: 99
 
 ### Currencies
 ```tpl
-{{</* tomestone <text> <type> */>}}
+{{</*tomestone <text> <type> */>}}
+{{</*scrip <text> <type> */>}}
+{{</*currency <text> <type> */>}}
 ```
 
 {{% columns %}}
-> It will cost {{<tomestone 100 "poetics" >}}.
+It will cost {{% tomestone 100 poetics %}}.
 <--->
 ```tpl
 It will cost {{</* tomestone 100 "poetics" */>}}.
@@ -24,16 +26,7 @@ It will cost {{</* tomestone 100 "poetics" */>}}.
 {{% /columns %}}
 #### Option
 
-Not all currency are present, since not all of them are used, so here's the list:
-
-* `gil` Gil
-* `poetics` Allagan Tomestones of Poetics
-* `aesthetics` Allagan Tomestones of Aesthetics
-* `heliometry` Allagan Tomestones of Heliometry
-* `nuts` Sacks of Nuts
-* `centurio` Centurio Seal
-* `allied` Allied Seal
-* `bicolor` Bicolor Gemstone
+Almost all currencies are present, at least the one that matter. See the [Datasets](datasets) page for the full list.
 
 ### Game References
 
