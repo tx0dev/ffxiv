@@ -5,7 +5,11 @@ bookToC: false
 
 # The Lab
 
-{{< call-partial "xiv/pill.html" "aetheryte" "The Goblet" "The Goblet" >}}
+{{< map "Mor Dhona" >}}
+{{< marker x=30.2 y=13.0 text="Go home to Mama" img="levemete">}}
+{{< circle x=15 y=11 img="mob" text="Mudpuppy" >}}
+{{< circle x=24 y=12.5 img="mob" text="Lake Cobra" >}}
+{{< /map >}}
 
 
 ## Testing Tooltip
@@ -25,6 +29,7 @@ Should not have two icons.
 
 
 {{% columns %}}
+
 | Sprite      | Link  |
 |-------------|-------|
 | Dungeon     | {{< xiv duty=dungeon >}}Yuweyawata Field Station{{< /xiv >}} |
@@ -48,4 +53,13 @@ Should not have two icons.
 | Feature Repeat | {{< xiv quest=featurerepeat >}}House of Splendid Ancestors{{< /xiv >}} |
 | MSQ         | {{< xiv quest=msq >}}The Ultimate Weapon{{< /xiv >}} |
 | Other    | {{< xiv quest=other >}}Breaking Brick Mountains{{< /xiv >}} |
+
+
+| Damage Type | Link |
+|-------------|------|
+| Physical | {{< xiv dmg=physical text="999,999" />}} |
+| Magical | {{< xiv dmg=magical text="999,999" />}} |
+| Unique | {{< xiv dmg=unique text="999,999" />}} |
+
+
 {{% /columns %}}
