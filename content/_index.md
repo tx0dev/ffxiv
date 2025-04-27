@@ -7,32 +7,37 @@ bookToc: false
 # Soktai FFXIV Reference
 
 {{% columns ratio=1:1 %}}
-[![Crossroads logo](https://lds-img.finalfantasyxiv.com/promo/h/0/_9pS37ahc1lqA9Sf-s4KMpl7KM.png)](https://eu.finalfantasyxiv.com/dawntrail/patch_7_1)
-[![Seekers of Eternity logo](https://lds-img.finalfantasyxiv.com/promo/h/1/GHzwPhGgDKfhkIgs9BemTNta-w.png)](https://na.finalfantasyxiv.com/dawntrail/patch_7_2/)
-
-**Current Patch** 7.18 (2025-02-24)
-
-**Next patch** [7.2 Seekers of Eternity](https://na.finalfantasyxiv.com/dawntrail/patch_7_2/) \
-Estimated: _Late March 2025_
-
-<--->
 [![Dawntrail Logo](https://lds-img.finalfantasyxiv.com/promo/h/p/vZ9Sq3CXXrB-PdQbFMV7KGVh48.png)](https://na.finalfantasyxiv.com/dawntrail)
-## Current Patch ~ 7.18
-[![](https://img.finalfantasyxiv.com/t/250f1d4df14979237c58f5a34f877efc7ef17eed.png?1740451701)](https://eu.finalfantasyxiv.com/lodestone/topics/detail/250f1d4df14979237c58f5a34f877efc7ef17eed)
+## Letter from the producer
+**Last** [Friday, 14 March 2025 at 10:00 (GMT) / 21:00 (AEDT)](https://eu.finalfantasyxiv.com/lodestone/topics/detail/8344f09b9127c2ae3b0af3485d970b56b8d801d9)
 
-{{% /columns %}}
-
-### Letter from the producer
-**Next** [Friday, 14 March 2025 at 10:00 (GMT) / 21:00 (AEDT)](https://eu.finalfantasyxiv.com/lodestone/topics/detail/8344f09b9127c2ae3b0af3485d970b56b8d801d9)
-
-Details
 * Patch 7.2 Part 2
 * Miscellaneous Updates
 
+**Next** Not schedule yet.
 
-### Site update
+<--->
+[![Seekers of Eternity logo](https://lds-img.finalfantasyxiv.com/promo/h/1/GHzwPhGgDKfhkIgs9BemTNta-w.png)](https://na.finalfantasyxiv.com/dawntrail/patch_7_2/)
 
-#### 2025-03-08
+## Current Patch ~ 7.21 (2025-04-22)
+[![](https://img.finalfantasyxiv.com/t/6f824223a7e10da7b9b7dfc84f626d10d4df88b3.png)](https://na.finalfantasyxiv.com/lodestone/topics/detail/6f824223a7e10da7b9b7dfc84f626d10d4df88b3)
+
+### Next patches
+*Estimate based on previous expansions*
+
+* 7.25 -> May 27 2025
+* 7.3 -> Estimated: _July 2025_
+* 7.4 -> Estimated: _November 2025_
+* 7.5 -> Estimated: _April 2026_
+
+{{% /columns %}}
+
+## Site update
+
+### 2025-04-26
+* Updated patch information.
+
+### 2025-03-08
 * Added proper support for maps, still needs improvement.
 
 <div style="font-size:0.8em; text-align:right;">
