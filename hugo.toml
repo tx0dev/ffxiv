@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: MIT
 
-baseURL = 'https://soktai.prose.sh/'
+baseURL = 'https://soktai.ca/'
 languageCode = 'en-ca'
 title = "Soktai's FFXIV"
 enableGitInfo = true
