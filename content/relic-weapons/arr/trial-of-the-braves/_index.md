@@ -33,6 +33,49 @@ Raise Mind
 - {{< xiv quest=levequest text="The Awry Salvages" />}} from {{< xiv npc=levemete text="Eidhart" />}}
 
 {{< details title="Maps" >}}
+{{< map "Mor Dhona" "Skyfire I (1) - Mor Dhona" >}}
+{{< marker x=30 y=12.0 text="Go home to Mama" icon=levemete >}}
+{{< circle x=14 y=11 icon=mob text="Mudpuppy" >}}
+{{< circle x=26 y=12 icon=mob text="Lake Cobra" >}}
+{{< /map >}}
+
+{{< map "Coerthas Central Highlands" "Skyfire I (2) - Coerthas Central Highlands" >}}
+{{< marker x=34.2 y=13.7 icon=fate text="Bellyful" >}}
+{{< marker x=12 y=16.5 icon=levemete text="Whispers of the Gem" >}}
+{{< circle x=14 y=27 icon=mob text="Giant Reader" >}}
+{{< /map >}}
+
+{{< map "Western La Noscea" "Skyfire I (3)" >}}
+{{< marker x=14.6 y=35 icon=fate text="The King's Justice" >}}
+{{< circle x=13.5 y=17 size=60 icon=mob text="Sea Wasp" >}}
+{{< circle x=19.5 y=20.5 size=100 icon=mob text="Shelfscale Sahagin" >}}
+{{< /map >}}
+
+{{< map "Eastern La Noscea" "Skyfire I (4)" >}}
+{{< circle x=29 y=20.5 size=100 icon=mob text="2nd Cohort Eques" >}}
+{{< /map >}}
+
+{{< map "Outer La Noscea" "Skyfire I (5)" >}}
+{{< circle x=22 y=7.5 size=100 icon=mob text="U'Ghamaro Quarryman" >}}
+{{< /map >}}
+
+{{< map "Southern Thanalan" "Skyfire I (6)" >}}
+{{< circle x=18 y=21.5 size=110 icon=mob text="Amalj'aa Lancer" >}}
+{{< /map >}}
+
+{{< map "Eastern Thanalan" "Skyfire I (7)" >}}
+{{< marker x=26.2 y=25 icon=fate text="Quartz Coupling" >}}
+{{< /map >}}
+
+{{< map "Northern Thanalan" "Skyfire I (8)" >}}
+{{< circle x=18 y=17 size=130 icon=mob text="Magitek Vanguard" >}}
+{{< marker x=22.3 y=30 icon=levemete text="Circling the Ceruleum" >}}
+{{< /map >}}
+
+{{< map "East Shroud" "Skyfire I (9)" >}}
+{{< circle x=23 y=11 size=110 icon=mob text="Sylpheed Sentinel" >}}
+{{< /map >}}
+
 {{< /details >}}
 
 ### Book of Skyfire II
